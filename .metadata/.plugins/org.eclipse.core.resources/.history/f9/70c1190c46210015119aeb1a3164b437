@@ -1,0 +1,8 @@
+
+public class FruitSeller {
+
+	int price;
+	int numOfFruit;
+	int money;
+	
+}

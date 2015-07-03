@@ -1,0 +1,7 @@
+
+public class ManTest {
+	
+	public static void main(String[] args){
+		Man james = new Man("James", 40, true , 3);
+	}
+}

@@ -1,0 +1,21 @@
+
+public class FruitSeller {
+
+	private int price;
+	private int fruitCount;
+	private int money;
+	
+	public FruitSeller(int price, int fruitCount, int money){
+		this.price = price;
+		this.fruitCount = fruitCount;
+		this.money = money;
+	}
+	
+	public int sellFruit(int money){
+		return money / price;
+	}
+	
+	public void printSeller(){
+		
+	}
+}
