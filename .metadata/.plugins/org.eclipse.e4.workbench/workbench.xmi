@@ -176,7 +176,7 @@
                 <children xsi:type="advanced:Placeholder" xmi:id="_QfmY-iE4EeWN7a474Cdk6A" elementId="org.eclipse.egit.ui.RepositoriesView" toBeRendered="false" ref="_Qfj8sCE4EeWN7a474Cdk6A"/>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_QfmY-yE4EeWN7a474Cdk6A" containerData="8124" selectedElement="_QfmZBSE4EeWN7a474Cdk6A">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_QfmY-yE4EeWN7a474Cdk6A" containerData="8124" selectedElement="_QfmY_CE4EeWN7a474Cdk6A">
               <children xsi:type="basic:PartSashContainer" xmi:id="_QfmY_CE4EeWN7a474Cdk6A" containerData="7500" selectedElement="_QfmY_SE4EeWN7a474Cdk6A" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_QfmY_SE4EeWN7a474Cdk6A" elementId="org.eclipse.ui.editorss" containerData="7820" ref="_9YP2EB-hEeWBkLVZ_jibfA"/>
                 <children xsi:type="basic:PartSashContainer" xmi:id="_QfmY_iE4EeWN7a474Cdk6A" containerData="2180">
@@ -243,7 +243,7 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_rHmIcCF-EeWwlM7GfKYmAw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="TestBirthday.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;TestBirthday.java&quot; partName=&quot;TestBirthday.java&quot; title=&quot;TestBirthday.java&quot; tooltip=&quot;HW1/src/TestBirthday.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/HW1/src/TestBirthday.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;152&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;TestBirthday.java&quot; partName=&quot;TestBirthday.java&quot; title=&quot;TestBirthday.java&quot; tooltip=&quot;HW1/src/TestBirthday.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/HW1/src/TestBirthday.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;113&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
@@ -413,7 +413,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9I810B-hEeWBkLVZ_jibfA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_K4uF0CGBEeW7Z9gTBunoHA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_8f6f5R-hEeWBkLVZ_jibfA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_HsMjYCSKEeWJc_54lf1RYA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_8f6f5R-hEeWBkLVZ_jibfA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9I9c4B-hEeWBkLVZ_jibfA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -446,7 +446,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9I9c5B-hEeWBkLVZ_jibfA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_K4yXQCGBEeW7Z9gTBunoHA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_8fwH0h-hEeWBkLVZ_jibfA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_HsRb4CSKEeWJc_54lf1RYA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_8fwH0h-hEeWBkLVZ_jibfA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9I-D8B-hEeWBkLVZ_jibfA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -788,7 +788,7 @@
     </bindings>
     <bindings xmi:id="_8mBu8B-hEeWBkLVZ_jibfA" keySequence="ALT+CTRL+H" command="_8fg3Rh-hEeWBkLVZ_jibfA"/>
     <bindings xmi:id="_8mBu8h-hEeWBkLVZ_jibfA" keySequence="ALT+COMMAND+SHIFT+ARROW_DOWN" command="_8f88Mh-hEeWBkLVZ_jibfA"/>
-    <bindings xmi:id="_KSsAkCGBEeW7Z9gTBunoHA" keySequence="COMMAND+CTRL+F" command="_8mUC0B-hEeWBkLVZ_jibfA"/>
+    <bindings xmi:id="_HHy10SSKEeWJc_54lf1RYA" keySequence="COMMAND+CTRL+F" command="_8mUC0B-hEeWBkLVZ_jibfA"/>
   </bindingTables>
   <bindingTables xmi:id="_8i9M0R-hEeWBkLVZ_jibfA" elementId="org.eclipse.ui.textEditorScope" bindingContext="_8gHUMx-hEeWBkLVZ_jibfA">
     <bindings xmi:id="_8i9z4B-hEeWBkLVZ_jibfA" keySequence="COMMAND+SHIFT+NUMPAD_MULTIPLY" command="_8fwH3h-hEeWBkLVZ_jibfA"/>
@@ -1226,7 +1226,7 @@
     <bindings xmi:id="_8mBH4B-hEeWBkLVZ_jibfA" keySequence="CTRL+D" command="_8fkhrR-hEeWBkLVZ_jibfA"/>
   </bindingTables>
   <bindingTables xmi:id="_8mV4AR-hEeWBkLVZ_jibfA" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_8edHVx-hEeWBkLVZ_jibfA">
-    <bindings xmi:id="_KStOsCGBEeW7Z9gTBunoHA" keySequence="M1+W" command="_8mVQ8R-hEeWBkLVZ_jibfA"/>
+    <bindings xmi:id="_HHzc4CSKEeWJc_54lf1RYA" keySequence="M1+W" command="_8mVQ8R-hEeWBkLVZ_jibfA"/>
   </bindingTables>
   <bindingTables xmi:id="_9YRrQR-hEeWBkLVZ_jibfA" bindingContext="_9YRrQB-hEeWBkLVZ_jibfA"/>
   <bindingTables xmi:id="_9YSSUR-hEeWBkLVZ_jibfA" bindingContext="_9YSSUB-hEeWBkLVZ_jibfA"/>
