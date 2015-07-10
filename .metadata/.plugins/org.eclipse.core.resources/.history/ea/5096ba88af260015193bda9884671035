@@ -1,0 +1,16 @@
+
+public class StudentTest {
+
+	public static void main(String[] args) {
+		
+		Student std1 = new Student();
+		System.out.println(std1.getId());
+		
+		Student std2 = new Student();
+		System.out.println(std2.getId());
+		
+		
+
+	}
+
+}
