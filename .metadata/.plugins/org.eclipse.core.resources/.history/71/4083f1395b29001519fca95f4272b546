@@ -1,0 +1,13 @@
+
+public class Company {
+	private Company instance = new Company();
+	
+	private Company(){}
+	
+	public Singleton getInstance(){
+		
+		if(instance == null)
+			return new Company();
+		return instance;
+	}
+}

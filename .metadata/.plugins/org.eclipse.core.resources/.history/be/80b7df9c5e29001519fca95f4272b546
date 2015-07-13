@@ -1,0 +1,19 @@
+
+public class Company<Singleton> {
+	private Company instance = new Company();
+	public Sonata sonata = new Sonata(3000);
+	public Grandeur grandeur = new Grandeur(4000);
+	public Genesis genesis = new Genesis(5000);
+	
+	
+	private Company(){}
+	
+	public Company getInstance(){
+		
+		if(instance == null)
+			instance = new Company<Object>();
+		
+		return instance;
+		
+	}
+}

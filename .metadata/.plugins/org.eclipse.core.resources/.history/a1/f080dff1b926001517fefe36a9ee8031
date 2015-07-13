@@ -1,0 +1,17 @@
+
+public class Manager extends Employee{
+
+	public String name;
+	public int sabun;
+	private double salary;
+	public String department;
+	
+	
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	
+}

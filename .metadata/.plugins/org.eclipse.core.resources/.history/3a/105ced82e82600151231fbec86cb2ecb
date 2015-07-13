@@ -1,0 +1,45 @@
+
+class Shape{
+	
+	public void draw(){
+		System.out.println("Draw shape");
+	}
+}
+
+class Circle extends Shape{
+	public void draw(){
+		System.out.println("Draw Circle");
+	}
+}
+
+
+class Triangle extends Shape{
+	public void draw(){
+		System.out.println("Draw Triangle");
+	}
+}
+
+class Rectangle extends Shape{
+	public void draw(){
+		System.out.println("Draw Rectangle");
+	}
+}
+
+class ShapeTest{
+	public static void main(String[] args){
+		ShapeTest st = new ShapeTest();
+		st.drawShape(new Rectangle());
+		st.drawShape(new Triangle());
+		st.drawShape(new Circle());
+	}
+	
+	public void drawShape(Shape s){
+		s.draw();
+	}
+	
+	public Shape makeShape(int type){
+		if(type == 1) return new Circle();
+		else if(type == 2) return new Rectangle())
+				
+	}
+}
