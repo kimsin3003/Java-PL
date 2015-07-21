@@ -1,6 +1,0 @@
-
-public class Grandeur extends Car{
-	public Grandeur(int price){
-		this.price = price;
-	}
-}

@@ -1,0 +1,22 @@
+
+public class GameLevel1 extends GameLevel {
+
+	@Override
+	void simpleAttack() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	void turnAttack() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	void flyingAttack() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,12 @@
+
+public class Player {
+	int level = 0;
+	ArrayList<GameLevel>
+	
+	void upgradeLevel(){
+		
+	}
+	getGameLevel()
+	attack()
+	
+}

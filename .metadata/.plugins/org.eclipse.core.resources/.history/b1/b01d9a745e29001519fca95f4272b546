@@ -1,6 +1,0 @@
-
-public class Sonata extends Car {
-	public Sonata(int price){
-		this.price = price;
-	}
-}

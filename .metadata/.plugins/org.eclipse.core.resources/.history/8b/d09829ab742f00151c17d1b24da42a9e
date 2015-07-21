@@ -1,0 +1,12 @@
+
+public class Player {
+	int level = 0;
+	GameLevel1 level1 = GameLevel1.getInstance();
+	
+	void upgradeLevel(){
+		
+	}
+	getGameLevel()
+	attack()
+	
+}

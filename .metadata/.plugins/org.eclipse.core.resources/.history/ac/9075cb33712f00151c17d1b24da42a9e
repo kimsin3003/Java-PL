@@ -1,0 +1,9 @@
+
+public class Player {
+	GameLevel level = new GameLevel();
+	
+	upgradeLevel()
+	getGameLevel()
+	attack()
+	
+}

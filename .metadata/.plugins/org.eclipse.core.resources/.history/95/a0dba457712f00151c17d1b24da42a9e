@@ -1,0 +1,9 @@
+
+public class Player {
+	
+	
+	void upgradeLevel()
+	getGameLevel()
+	attack()
+	
+}

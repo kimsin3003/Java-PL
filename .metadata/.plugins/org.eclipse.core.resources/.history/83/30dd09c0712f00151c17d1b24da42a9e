@@ -1,0 +1,15 @@
+
+public abstract class GameLevel {
+	
+	public GameLevel()
+	
+	public abstract void simpleAttack();
+	public abstract void turnAttack();
+	public abstract void flyingAttack();
+	
+	void play(){
+		simpleAttack();
+		turnAttack();
+		flyingAttack();
+	}
+}

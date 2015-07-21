@@ -1,0 +1,31 @@
+
+public class GameLevel3 extends GameLevel {
+
+private static GameLevel3 level1 = new GameLevel3();
+	
+	private GameLevel3(){}
+	
+	public static GameLevel3 getInstance(){
+		if(level1 == null)
+			level1 = new GameLevel3();
+		return level1;
+	}
+	
+	@Override
+	public void simpleAttack() {
+		System.out.println("메롱~~~");
+		
+	}
+
+	@Override
+	public void turnAttack() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void flyingAttack() {
+		// TODO Auto-generated method stub
+		
+	}
+}

@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+
+public class Player {
+	int level = 0;
+	ArrayList<GameLevel> levels = new ArrayList<GameLevel>();
+	
+	void upgradeLevel(){
+		
+	}
+	getGameLevel()
+	attack()
+	
+}

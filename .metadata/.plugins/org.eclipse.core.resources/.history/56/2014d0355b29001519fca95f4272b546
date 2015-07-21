@@ -1,6 +1,0 @@
-
-public class Company {
-	private Company instance = new Company();
-	
-	private Company(){};
-}

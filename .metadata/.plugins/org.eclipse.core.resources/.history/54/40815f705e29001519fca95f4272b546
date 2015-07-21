@@ -1,6 +1,0 @@
-
-public class Genesis extends Car{
-	public Genesis(int price){
-		this.price = price;
-	}
-}
