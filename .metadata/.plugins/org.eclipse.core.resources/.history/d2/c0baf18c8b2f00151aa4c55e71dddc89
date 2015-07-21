@@ -1,5 +1,3 @@
-package Game;
-
 
 public class GameLevel3 extends GameLevel {
 

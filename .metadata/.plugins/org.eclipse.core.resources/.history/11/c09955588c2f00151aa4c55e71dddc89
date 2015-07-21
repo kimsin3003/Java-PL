@@ -28,6 +28,4 @@ public class Player {
 		System.out.println("========level" + (level+1) + " end=============\n\n");
 	}
 	
-	
-	
 }

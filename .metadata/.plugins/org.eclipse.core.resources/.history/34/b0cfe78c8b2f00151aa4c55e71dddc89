@@ -1,5 +1,3 @@
-package Game;
-
 
 public abstract class GameLevel {
 	
