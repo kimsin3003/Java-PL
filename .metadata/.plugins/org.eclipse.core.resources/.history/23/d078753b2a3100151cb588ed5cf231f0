@@ -1,0 +1,18 @@
+
+public class Student {
+	String name;
+	int ban;
+	int no;
+	int kor;
+	int eng;
+	int math;
+	
+	
+	public int getTotal(){
+		return kor + eng + math;
+	}
+	
+	public float getAverage(){
+		return (float) (Math.round(getTotal() * 100d) / 300d);
+	}
+}

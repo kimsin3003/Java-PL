@@ -8,4 +8,11 @@
 <fullyQualifiedTypeName name="junit.framework.TestCase"/>
 <fullyQualifiedTypeName name="test.Vehicle"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="SutdaCard"/>
+<fullyQualifiedTypeName name="Student"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="Chapter7.SutdaDeck"/>
+<fullyQualifiedTypeName name="Chapter7.SutdaCard"/>
+<fullyQualifiedTypeName name="Chapter7.MyTv2"/>
 </qualifiedTypeNameHistroy>
