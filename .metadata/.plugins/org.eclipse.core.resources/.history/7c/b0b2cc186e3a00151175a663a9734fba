@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+
+public class Major implements Strategy{
+	
+	ArrayList<Student> students = new ArrayList<Student>();
+
+	
+	void enroll(Student newStu){
+		students.add(newStu);
+	}
+	
+	void drop(Student deadStu){
+		students.remove(deadStu);
+	}
+	
+	char getGrade(Student )
+}

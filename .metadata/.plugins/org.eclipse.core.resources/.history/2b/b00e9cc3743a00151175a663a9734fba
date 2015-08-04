@@ -1,0 +1,24 @@
+
+public class School {
+
+	public static void main(String[] args) {
+		Math mathClass = new Math();
+		English engClass = new English();
+		
+		Student s1 =  new Student("이승기", "141213", "수학");
+		Student s2 =  new Student("김수현", "141518", "영어");
+		Student s3 =  new Student("주원", "141230", "수학");
+		Student s4 =  new Student("김우빈", "141255", "수학");
+		Student s5 =  new Student("이민호", "141590", "영어");
+		
+		mathClass.enroll(s1);
+		mathClass.enroll(s1);
+		mathClass.enroll(s1);
+		mathClass.enroll(s1);
+		mathClass.enroll(s1);
+		
+		
+
+	}
+
+}

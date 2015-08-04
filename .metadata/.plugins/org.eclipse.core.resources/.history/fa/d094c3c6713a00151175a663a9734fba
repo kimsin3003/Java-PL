@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+
+public class Math implements Strategy{
+	
+	ArrayList<Student> students = new ArrayList<Student>();
+
+	@Override
+	public char getMajorGrade(Student student) {
+		
+		return 0;
+	}
+
+	@Override
+	public char getNonMajorGrade(Student student) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

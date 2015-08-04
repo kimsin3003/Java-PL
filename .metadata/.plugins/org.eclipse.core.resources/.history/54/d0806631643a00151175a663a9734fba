@@ -1,0 +1,13 @@
+
+public class Major implements Strategy {
+
+	@Override
+	public char computeGrade(int score) {
+		
+		if(score < 60)
+			return 
+		
+		return 0;
+	}
+
+}

@@ -1,0 +1,25 @@
+
+public class Student {
+
+	String name;
+	String id;
+	String major;
+	int mathScore;
+	int engScore;
+	
+	public int getMathScore() {
+		return mathScore;
+	}
+	public void setMathScore(int mathScore) {
+		this.mathScore = mathScore;
+	}
+	public int getEngScore() {
+		return EngScore;
+	}
+	public void setEngScore(int engScore) {
+		EngScore = engScore;
+	}
+	
+	
+	
+}

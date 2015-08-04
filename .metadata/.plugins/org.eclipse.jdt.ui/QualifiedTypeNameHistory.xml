@@ -7,7 +7,6 @@
 <fullyQualifiedTypeName name="test.StudentTest"/>
 <fullyQualifiedTypeName name="junit.framework.TestCase"/>
 <fullyQualifiedTypeName name="test.Vehicle"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="SutdaCard"/>
 <fullyQualifiedTypeName name="Student"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
@@ -15,4 +14,13 @@
 <fullyQualifiedTypeName name="Chapter7.SutdaDeck"/>
 <fullyQualifiedTypeName name="Chapter7.SutdaCard"/>
 <fullyQualifiedTypeName name="Chapter7.MyTv2"/>
+<fullyQualifiedTypeName name="userinfo.UserInfo"/>
+<fullyQualifiedTypeName name="userinfo.dao.UserInfoDaoOracle"/>
+<fullyQualifiedTypeName name="userinfo.dao.oracle.UserInfoDaoOracle"/>
+<fullyQualifiedTypeName name="java.text.FieldPosition"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="userinfo.dao.IUserInfoDao"/>
+<fullyQualifiedTypeName name="userinfo.dao.mysql.UserInfoDaoMySql"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

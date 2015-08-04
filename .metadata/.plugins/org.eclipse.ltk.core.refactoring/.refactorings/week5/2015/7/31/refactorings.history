@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;week5/src/userinfo/dao/mysql/UserInfoMySql.java&apos; to &apos;UserInfoDaoMySql.java&apos;" description="Rename resource &apos;UserInfoMySql.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/userinfo/dao/mysql/UserInfoMySql.java" name="UserInfoDaoMySql.java" stamp="1438308707667" updateReferences="true"/>
+</session>

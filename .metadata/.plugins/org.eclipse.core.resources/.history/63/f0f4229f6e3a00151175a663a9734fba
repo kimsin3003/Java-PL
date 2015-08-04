@@ -1,0 +1,10 @@
+
+public class Student {
+
+	String name;
+	String id;
+	String major;
+	int mathScore;
+	int EngScore;
+	
+}

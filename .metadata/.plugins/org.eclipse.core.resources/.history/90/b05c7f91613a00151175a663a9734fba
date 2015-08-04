@@ -1,0 +1,4 @@
+
+public interface Strategy {
+	public static int computeGrade(int score);
+}

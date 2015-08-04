@@ -1,0 +1,18 @@
+
+public class Math implements Strategy{
+	
+	ArrayList<Student> students = new ArrayList<Student>();
+
+	@Override
+	public char getMajorGrade(int score) {
+		
+		return 0;
+	}
+
+	@Override
+	public char getNonMajorGrade(int score) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

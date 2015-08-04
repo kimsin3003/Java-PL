@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+
+public abstract class Class implements Strategy{
+	
+	ArrayList<Student> students = new ArrayList<Student>();
+
+	
+	void enroll(Student newStu){
+		students.add(newStu);
+	}
+	
+	void drop(Student deadStu){
+		students.remove(deadStu);
+	}
+	
+	abstract void setScore(Student st, int score);
+	
+	void setGrade(){
+		for(int i = 0; i < students.size(); i++)
+			computeGrade(students.get(i));
+	}
+	
+	public abstract void computeGrade(Student stu);
+}

@@ -1,0 +1,10 @@
+
+public class NonMajor implements Strategy {
+
+	@Override
+	public char computeGrade(int score) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

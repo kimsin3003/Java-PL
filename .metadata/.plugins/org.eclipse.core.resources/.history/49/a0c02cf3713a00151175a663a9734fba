@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+
+public class Math extends Major{
+	
+	
+	@Override
+	void setScore(Student st, int score) {
+		st.mathScore = score;
+	}
+
+	@Override
+	public void computeGrade(Student stu) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public char getMajorGrade(Student student) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public char getNonMajorGrade(Student student) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

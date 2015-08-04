@@ -1,0 +1,18 @@
+public class English extends Class{
+	
+	@Override
+	void setScore(Student st, int score) {
+		st.setMathScore(score);
+	}
+
+	@Override
+	public void computeGrade(Student student) {
+		if(student.getMajor() == "Math")
+			getMajorGrade(student.getMathScore());
+		
+		else
+			getNonMajorGrade(student.getMathScore());
+		
+	}
+
+}

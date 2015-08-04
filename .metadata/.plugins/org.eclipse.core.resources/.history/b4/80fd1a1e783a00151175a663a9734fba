@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+
+public class School {
+
+	public static void main(String[] args) {
+		Math mathClass = new Math();
+		English engClass = new English();
+		
+		ArrayList<Student> students = new ArrayList<Student>();
+		
+		students.add(new Student("이승기", "141213", "수학"));
+		students.add(new Student("김수현", "141518", "영어"));
+		students.add(new Student("주원", "141230", "수학"));
+		students.add(new Student("김우빈", "141255", "수학"));
+		students.add(new Student("이민호", "141590", "영어"));
+		
+		for(int i = 0; i < students.size(); i++)
+		mathClass.enroll(students.get(index));
+		mathClass.enroll(s2);
+		mathClass.enroll(s3);
+		mathClass.enroll(s4);
+		mathClass.enroll(s5);
+		
+		mathClass.setScore(s1, 95);
+		mathClass.setScore(s2, 90);
+		mathClass.setScore(s3, 76);
+		mathClass.setScore(s4, 85);
+		mathClass.setScore(s5, 90);		
+		
+		engClass.enroll(s1);
+		engClass.enroll(s2);
+		engClass.enroll(s3);
+		engClass.enroll(s4);
+		engClass.enroll(s5);
+		
+		engClass.setScore(s1, 20);
+		engClass.setScore(s2, 100);
+		engClass.setScore(s3, 60);
+		engClass.setScore(s4, 89);
+		engClass.setScore(s5, 95);
+		
+		
+		System.out.println("이름: "+ s1.getName() + " 학번: " + s1.getId() + " 학과: " + s1.getMajor() + " 수학 학점: " + s1.getMathGrade() + "영어 학점: " + s1.getEngGrade());
+		System.out.println("이름: "+ s2.getName() + " 학번: " + s1.getId() + " 학과: " + s1.getMajor() + " 수학 학점: " + s1.getMathGrade() + "영어 학점: " + s1.getEngGrade());
+		System.out.println("이름: "+ s3.getName() + " 학번: " + s1.getId() + " 학과: " + s1.getMajor() + " 수학 학점: " + s1.getMathGrade() + "영어 학점: " + s1.getEngGrade());
+		System.out.println("이름: "+ s4.getName() + " 학번: " + s1.getId() + " 학과: " + s1.getMajor() + " 수학 학점: " + s1.getMathGrade() + "영어 학점: " + s1.getEngGrade());
+		System.out.println("이름: "+ s5.getName() + " 학번: " + s1.getId() + " 학과: " + s1.getMajor() + " 수학 학점: " + s1.getMathGrade() + "영어 학점: " + s1.getEngGrade());
+		
+			
+
+	}
+
+}

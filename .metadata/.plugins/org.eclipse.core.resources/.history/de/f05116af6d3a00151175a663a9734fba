@@ -1,0 +1,11 @@
+import java.util.ArrayList;
+
+public class Major {
+	
+	ArrayList<Student> students = new ArrayList<Student>();
+
+	
+	void getStudent(Student newStu){
+		students.add(newStu);
+	}
+}
