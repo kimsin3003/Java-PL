@@ -22,5 +22,6 @@
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="userinfo.dao.IUserInfoDao"/>
 <fullyQualifiedTypeName name="userinfo.dao.mysql.UserInfoDaoMySql"/>
+<fullyQualifiedTypeName name="Strategy"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
