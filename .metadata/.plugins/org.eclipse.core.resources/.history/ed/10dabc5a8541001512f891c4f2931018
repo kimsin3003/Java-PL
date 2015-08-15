@@ -1,0 +1,5 @@
+package Maze;
+
+public class Map {
+	Point map[][] = new Point[8][8];
+}

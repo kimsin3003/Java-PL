@@ -1,0 +1,11 @@
+package MazeRunner.Maze;
+
+public class Point {
+	public int x;
+	public int y;
+	public int dir;
+	
+	public Point(){
+		dir = 0;
+	}
+}

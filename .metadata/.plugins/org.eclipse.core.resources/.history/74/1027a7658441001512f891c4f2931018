@@ -1,0 +1,8 @@
+package Maze;
+
+public interface Point {
+
+		boolean[] directionList = null;
+		Point getNextPoint();
+		
+}

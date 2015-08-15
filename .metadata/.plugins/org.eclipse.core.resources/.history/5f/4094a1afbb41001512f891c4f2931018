@@ -1,0 +1,13 @@
+package Maze;
+
+import java.util.ArrayList;
+
+public class Strategy8 implements Strategy{
+
+	@Override
+	public int getNextDir(Point curPos) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

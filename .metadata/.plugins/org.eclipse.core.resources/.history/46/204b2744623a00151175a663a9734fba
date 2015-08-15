@@ -1,9 +1,0 @@
-
-public class Student {
-	String name;
-	String id;
-	String major;
-	int math;
-	int english;
-	
-}

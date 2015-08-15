@@ -1,0 +1,70 @@
+package MazeRunner;
+
+import java.util.ArrayList;
+
+import MazeRunner.Maze.Map;
+import MazeRunner.Maze.Point;
+import MazeRunner.Maze.Strategy;
+
+public class Player {
+	private ArrayList<Point> path = new ArrayList<Point>();
+	private Point curPos = new Point();
+	private Map map = new Map();
+	private int accessedPoints[][];
+	private Strategy strategy;
+
+	public Player(Strategy strategy){
+		this.strategy = strategy;
+		map.setMap();
+		accessedPoints = new int[map.getMapSize()][map.getMapSize()];//모두 0으로 초기화.
+	}
+	
+	public ArrayList<Point> searchPath(){
+		Point nextPos = null;
+		curPos.x = 0;
+		curPos.y = 0;
+		
+		//Continue until we get to the exit.
+		while(!map.isExit(curPos)){
+			
+			//get next direction
+			do{nextPos = strategy.getNextDir(curPos); 
+			}while( !canIGo(nextPos) && curPos.dir != -1 );
+			
+			if(curPos.dir == -1){
+				System.out.println(curPos.dir);
+				curPos = path.get(path.size() - 1);
+				continue;
+			}
+			
+			path.add(curPos);
+			accessedPoints[curPos.y][curPos.x] = 1;
+			curPos = nextPos;
+				
+		}
+		System.out.println("Found Path!\n");
+		return path;
+	}
+	
+	private boolean canIGo(Point point){
+		
+		//is out of range
+		if(point.x < 0 || point.x >= map.getMapSize())
+			return false;
+		
+		if(point.y < 0 || point.y >= map.getMapSize())
+			return false;
+		
+		
+		//already in the path,
+		if(accessedPoints[point.y][point.x] == 1)
+			return false;
+		
+		
+		//is wall
+		if(map.getLocInfo(point) == 1)
+			return false;
+		
+		return true;
+	}
+}

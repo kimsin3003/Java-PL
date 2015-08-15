@@ -1,0 +1,11 @@
+package Maze;
+
+public class PointF implements Point{
+
+	@Override
+	public Point getNextPoint() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,7 +1,0 @@
-
-public interface Strategy {
-
-	char getMajorGrade(Student student);
-	char getNonMajorGrade(int score);
-	
-}

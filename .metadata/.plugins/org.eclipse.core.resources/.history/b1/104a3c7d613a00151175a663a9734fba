@@ -1,4 +1,0 @@
-
-public interface Strategy {
-	int computeGrade(int score);
-}

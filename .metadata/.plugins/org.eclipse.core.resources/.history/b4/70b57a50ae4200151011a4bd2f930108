@@ -1,0 +1,41 @@
+package MazeRunner.Test;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import MazeRunner.Player;
+import MazeRunner.Maze.Strategy;
+import MazeRunner.Maze.Strategy4;
+import MazeRunner.Maze.Strategy8;
+
+public class MazeTest {
+
+	public static void main(String args[]) throws IOException{
+		
+		Properties prop = new Properties();
+		FileInputStream input = null;
+		Strategy strategy = new Strategy8();;
+		/*String path = ClassLoader.getSystemResource("config.properties").getPath();
+		input = new FileInputStream(path);
+		prop.load(input);
+		
+		if(prop.getProperty("direction") == "8")
+			 strategy = new Strategy8();
+		
+		if(prop.getProperty("direction") == "4")
+			 strategy = new Strategy4();*/
+		
+		/*Point p = new Point();
+		Point temp;
+		p.x = 0;
+		p.y = 0;
+		System.out.println(p.dir + "\n\n");
+		temp = strategy.getNextPos(p);
+		System.out.println(p.dir + "\n\n");
+		System.out.println(temp.x + " " + temp.y);*/
+		Player player = new Player(strategy);
+		System.out.println(player.searchPath());
+		
+		
+	}
+}

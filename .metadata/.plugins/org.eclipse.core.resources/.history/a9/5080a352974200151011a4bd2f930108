@@ -1,0 +1,7 @@
+package Maze;
+
+public interface Strategy {
+
+	//Gets current point in map, and returns location of next Point. 
+	public Point getNextDir(Point curPos);
+}

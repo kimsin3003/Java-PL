@@ -1,0 +1,8 @@
+package Maze;
+
+public interface Strategy {
+
+		boolean[] directionList = null;
+		Strategy getNextPoint();
+		
+}

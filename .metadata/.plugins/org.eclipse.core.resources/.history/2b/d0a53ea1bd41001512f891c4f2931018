@@ -1,0 +1,18 @@
+package Maze;
+
+public class Strategy8 implements Strategy{
+
+	@Override
+	public Point getNextDir(Point curPos) {
+		Point nextPos;
+		switch (curPos.dir){
+		case 0: 
+			nextPos = curPos.y++;
+			curPos.dir++;
+		case
+			curP
+		}
+		
+	}
+
+}

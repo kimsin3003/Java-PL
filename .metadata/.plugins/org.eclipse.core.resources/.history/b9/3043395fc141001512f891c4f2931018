@@ -1,0 +1,11 @@
+package Maze;
+
+public class Map {
+	private int mapSize = 8;
+	private int map[][] = new int[mapSize][mapSize];
+	
+	
+	public getLocInfo(Point pos){
+		return map[pos.y][pos.x];
+	}
+}

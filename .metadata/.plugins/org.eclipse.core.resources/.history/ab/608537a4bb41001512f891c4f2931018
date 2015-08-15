@@ -1,0 +1,6 @@
+package Maze;
+
+public class Point {
+	int x;
+	int y;
+}

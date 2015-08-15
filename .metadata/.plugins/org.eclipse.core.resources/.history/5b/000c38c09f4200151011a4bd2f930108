@@ -1,0 +1,54 @@
+package MazeRunner.Maze;
+
+public class Strategy8 implements Strategy{
+
+	@Override
+	public Point getNextDir(Point curPos) {
+		
+		Point nextPos = new Point();
+		switch (curPos.dir){
+		case 0: 
+			nextPos.x = curPos.x;
+			nextPos.y = curPos.y + 1;
+			curPos.dir++;
+			
+		case 1:
+			nextPos.x = curPos.x + 1;
+			nextPos.y = curPos.y + 1;
+			curPos.dir++;
+			
+		case 2:
+			nextPos.x = curPos.x + 1;
+			nextPos.y = curPos.y;
+			curPos.dir++;
+			
+		case 3:
+			nextPos.x = curPos.x + 1;
+			nextPos.y = curPos.y - 1;
+			curPos.dir++;
+			
+		case 4:
+			nextPos.x = curPos.x;
+			nextPos.y = curPos.y - 1;
+			curPos.dir++;
+			
+		case 5:
+			nextPos.x = curPos.x - 1;
+			nextPos.y = curPos.y - 1;
+			curPos.dir++;
+			
+		case 6:
+			nextPos.x = curPos.x - 1;
+			nextPos.y = curPos.y;
+			curPos.dir++;
+			
+		case 7:
+			nextPos.x = curPos.x - 1;
+			nextPos.y = curPos.y + 1;
+			curPos.dir = -1;
+		}
+		
+		return nextPos;
+	}
+
+}

@@ -1,0 +1,60 @@
+package MazeRunner.Test;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.Properties;
+
+import MazeRunner.Player;
+import MazeRunner.Maze.Point;
+import MazeRunner.Maze.Strategy;
+import MazeRunner.Maze.Strategy4;
+import MazeRunner.Maze.Strategy8;
+
+public class MazeTest {
+
+	public static void main(String args[]){
+		
+		Properties prop = new Properties();
+		FileInputStream output = null;
+
+		try {
+
+			output = new FileInputStream("config.properties");
+
+			// set the properties value
+			prop.setProperty("database", "localhost");
+			prop.setProperty("dbuser", "mkyong");
+			prop.setProperty("dbpassword", "password");
+
+			// save properties to project root folder
+			prop.store(output, null);
+
+		} catch (IOException io) {
+			io.printStackTrace();
+		} finally {
+			if (output != null) {
+				try {
+					output.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+
+		}
+		Strategy strategy = new Strategy8();
+		
+		/*Point p = new Point();
+		Point temp;
+		p.x = 0;
+		p.y = 0;
+		System.out.println(p.dir + "\n\n");
+		temp = strategy.getNextPos(p);
+		System.out.println(p.dir + "\n\n");
+		System.out.println(temp.x + " " + temp.y);*/
+		Player player = new Player(strategy);
+		System.out.println(player.searchPath());
+		
+		
+	}
+}
