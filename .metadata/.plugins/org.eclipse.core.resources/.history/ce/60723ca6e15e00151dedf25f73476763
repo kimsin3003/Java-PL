@@ -1,0 +1,53 @@
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.util.StringTokenizer;
+
+import javax.swing.Box;
+
+public class BoxOfficeTest {
+
+	public static void main(String[] args) throws IOException {
+		int id;
+		int arrival;
+		int ticketingTime;
+		String starPoint;
+		String endPoint;
+		FileInputStream fis;
+		InputStreamReader isr;
+		BufferedReader br = null;
+		StringTokenizer st;
+		String thisLine;
+		BoxOffice office = BoxOffice.getInstance();
+		
+		try {
+			fis = new FileInputStream("./passengerInfo.txt");
+			isr = new InputStreamReader(fis);
+			br = new BufferedReader(isr);
+			
+	        while ((thisLine = br.readLine()) != null) {
+	            st = new StringTokenizer(thisLine);
+	            id = Integer.parseInt(st.nextToken());
+	            arrival = Integer.parseInt(st.nextToken());
+	            ticketingTime = Integer.parseInt(st.nextToken());
+	            starPoint = st.nextToken();
+	            endPoint = st.nextToken();
+	            System.out.println(id + ", " + arrival + ", " + ticketingTime + ", " + startPoint + ", " + endPoint);
+	            //office.enqueuePassenger(new Passenger(id, arrival, ticketingTime, starPoint, endPoint));
+	        }
+
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("Cannot open file");
+			e.printStackTrace();
+		} finally {
+			br.close();
+		}
+		
+	}
+
+}

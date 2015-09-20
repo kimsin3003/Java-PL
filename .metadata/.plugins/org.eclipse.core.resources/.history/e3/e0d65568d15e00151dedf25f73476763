@@ -1,0 +1,9 @@
+
+public class BoxOffice {
+
+	Server[] servers;
+	
+	public BoxOffice() {
+		servers = new Server[3];
+	}
+}

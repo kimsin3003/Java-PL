@@ -1,0 +1,51 @@
+package common.BoxOfficeTest;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+import common.ServiceStrategy.*;
+import common.Station.BoxOffice;
+import common.Station.Passenger;
+
+public class BoxOfficeTest {
+
+	public static void main(String[] args){
+		int time = 0;
+		BoxOffice office = BoxOffice.getInstance();
+		ArrayList<Passenger> passengers = new ArrayList<Passenger>();
+		Strategy strategies[] = new Strategy[2];
+		strategies[0] = new Strategy_FIFO();
+		strategies[1] = new Strategy_LTFO();
+		
+		Strategy strategy = strategies[0];
+		//play simulation
+		while( !passengers.isEmpty() || office.hasPassenger()){//when there's passengers who are not arrived or not served, 
+			Passenger p;
+			while(true){
+				if(!passengers.isEmpty()){
+
+					p = passengers.get(0);
+					if(p.getOfficeArrivalTime() == time){//If passenger has arrived,
+						System.out.println("size:" + passengers.size());
+						office.enqueuePassenger(p);//enqueue passenger to box office waiting line.
+						passengers.remove(0);
+					}
+					else 
+						break;
+				}
+				else
+					break;
+			}
+			office.simulate(strategy, time);
+			time++;
+		}
+		
+	
+	}
+
+}

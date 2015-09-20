@@ -1,8 +1,0 @@
-package Maze;
-
-public class Map {
-	private int mapSize = 8;
-	Point map[][] = new int[mapSize][mapSize];
-	
-	
-}

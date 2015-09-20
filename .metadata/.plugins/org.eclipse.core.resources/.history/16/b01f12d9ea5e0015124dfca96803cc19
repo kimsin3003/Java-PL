@@ -1,0 +1,13 @@
+package ServiceStrategy;
+
+import java.util.ArrayList;
+
+public class Strategy_LTFO implements Strategy{
+
+	@Override
+	public int getNextIndex(ArrayList passengers) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

@@ -1,0 +1,5 @@
+
+public class BoxOffice {
+
+	Thread sever[] = new Thread()[3];
+}

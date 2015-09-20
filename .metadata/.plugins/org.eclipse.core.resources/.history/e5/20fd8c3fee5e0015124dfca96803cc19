@@ -1,0 +1,17 @@
+package ServiceStrategy;
+
+import java.util.ArrayList;
+
+public class Strategy_LTFO implements Strategy{
+
+	@Override
+	public int getNextIndex(ArrayList passengers) {
+		int index = 0;
+		Passenger p = new Passenger();
+		for(int i = 0; i < passengers.size(); i++){
+			if(passengers.get(index))
+		}
+		return 0;
+	}
+	
+}

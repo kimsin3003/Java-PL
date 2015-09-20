@@ -1,0 +1,59 @@
+package common.BoxOfficeTest;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import common.ServiceStrategy.Strategy;
+import common.Station.BoxOffice;
+import common.Station.Passenger;
+import common.Station.Platform;
+import common.info.FileRW;
+
+public class Simulator {
+	
+	private static Simulator instance = null;
+	private Simulator(){}
+	
+	public static Simulator getInstance(){
+		if(instance == null)
+			instance = new Simulator();
+		return instance;
+	}
+	
+	public int start(Strategy strategy){
+		int time = 0;
+		BoxOffice office = BoxOffice.getInstance();
+		ArrayList<Passenger> passengers = new ArrayList<Passenger>();
+		ArrayList<Passenger> passengersWithTicket =  new ArrayList<Passenger>();
+		private Platform platform = Platform.getInstance();
+		try {
+			FileRW.dataLoad(passengers);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//play simulation
+		while( !passengers.isEmpty() || office.hasPassenger()){//when there's passengers who are not arrived or not served, 
+			Passenger p;
+			while(true){
+				if(!passengers.isEmpty()){
+
+					p = passengers.get(0);
+					if(p.getOfficeArrivalTime() == time){//If passenger has arrived,
+						//System.out.println("time: " + time + " size:" + passengers.size());
+						office.enqueuePassenger(p);//enqueue passenger to box office waiting line.
+						passengers.remove(0);
+					}
+					else 
+						break;
+				}
+				else
+					break;
+			}
+			office.simulate(strategy, passengersWithTicket, time);
+			
+			time++;
+		}
+		return time;
+	}
+}

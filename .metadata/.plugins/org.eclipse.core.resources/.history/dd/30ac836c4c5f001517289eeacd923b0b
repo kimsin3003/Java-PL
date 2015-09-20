@@ -1,0 +1,35 @@
+package BoxOffice.defaul;
+
+import java.util.ArrayList;
+
+public class Platform{
+	private static Platform instance = null;
+	private static ArrayList<Passenger> waitingPassengers;
+	private Platform(){	}
+	
+	public static Platform getInstance(){
+		if(instance == null)
+			instance = new Platform();
+		return instance;
+	}
+	
+	public void simulation(int time){
+		if(hasArrivedTrain(time))
+			dequeueAll();
+	}
+	
+	public void enqueuePassenger(Passenger p){
+		waitingPassengers.add(p);
+	}
+	
+	private boolean hasArrivedTrain(int time){
+		if(time%3 == 0)
+			return true;
+		return false;
+	}
+	
+	private void dequeueAll(){
+		waitingPassengers.clear();
+	}
+	
+}

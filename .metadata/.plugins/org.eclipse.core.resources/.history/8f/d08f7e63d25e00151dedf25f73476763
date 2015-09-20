@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+
+public class Platform{
+	private static Platform instance = null;
+	private static ArrayList waitingPassengers;
+	private Platform(){	}
+	
+	
+	public Platform getInstance(){
+		if(instance == null)
+			instance = new Platform();
+		return instance;
+	}
+	
+	public void enqueuePassenger(Passenger p){
+		waitingPassengers.add(p);
+	}
+	
+	public boolean hasArrivedTrain(int time){
+		if(time%3 == 0)
+			return true;
+		return false;
+	}
+	
+	public void dequeueAll(){
+		waitingPassengers.clear();
+	}
+	
+}

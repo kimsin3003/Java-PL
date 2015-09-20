@@ -1,6 +1,0 @@
-package Maze;
-
-public interface Strategy {
-
-	public Point getNextDir(Point curPos);
-}

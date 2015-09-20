@@ -1,0 +1,8 @@
+
+public class Passenger {
+	
+	int arrivalTime;
+	int ticketingTime;
+	int startPoint;
+	int endPoint;
+}

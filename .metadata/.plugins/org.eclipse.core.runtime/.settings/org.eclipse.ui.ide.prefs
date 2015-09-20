@@ -1,6 +1,8 @@
+IDE_ENCODINGS_PREFERENCE=MS949
 PROBLEMS_FILTERS_MIGRATE=true
+SHOW_LOCATION=true
 TASKS_FILTERS_MIGRATE=true
 eclipse.preferences.version=1
-platformState=1435721508100
+platformState=1442661200647
 quickStart=false
 tipsAndTricks=true

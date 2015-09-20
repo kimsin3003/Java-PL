@@ -1,0 +1,5 @@
+package ServiceStrategy;
+
+public interface Strategy {
+
+}

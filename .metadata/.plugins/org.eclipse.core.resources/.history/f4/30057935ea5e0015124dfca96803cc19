@@ -1,0 +1,5 @@
+package ServiceStrategy;
+
+public class Strategy_FIFO implements Strategy{
+	
+}

@@ -1,0 +1,19 @@
+package common.BoxOfficeTest;
+
+import common.ServiceStrategy.*;
+
+public class BoxOfficeTest {
+
+	public static void main(String[] args){
+		Strategy strategies[] = new Strategy[2];
+		strategies[0] = new Strategy_FIFO();
+		strategies[1] = new Strategy_LTFO();
+		Simulator simulator = Simulator.getInstance();
+		
+		System.out.println("spent time: " + simulator.start(strategies[0], "output1.txt"));
+		
+		System.out.println("spent time: " + simulator.start(strategies[1], "output2.txt");
+		
+	}
+
+}

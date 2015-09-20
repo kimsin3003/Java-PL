@@ -1,9 +1,0 @@
-package Maze;
-
-public class Strategy4 implements Strategy{
-
-	@Override
-	public Point getNextDir(Point curPos) {
-		
-	}
-}

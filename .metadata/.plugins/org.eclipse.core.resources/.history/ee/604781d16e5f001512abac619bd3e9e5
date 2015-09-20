@@ -1,0 +1,88 @@
+package common.BoxOfficeTest;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+import common.ServiceStrategy.*;
+import common.Station.BoxOffice;
+import common.Station.Passenger;
+
+public class BoxOfficeTest {
+
+	public static void main(String[] args) throws IOException {
+		int time = 0;
+		int id;
+		int arrival;
+		int ticketingTime;
+		String startPoint;
+		String endPoint;
+		FileInputStream fis;
+		InputStreamReader isr;
+		BufferedReader br = null;
+		StringTokenizer st;
+		String thisLine;
+		BoxOffice office = BoxOffice.getInstance();
+		ArrayList<Passenger> passengers = new ArrayList<Passenger>();
+		Strategy strategies[] = new Strategy[2];
+		strategies[0] = new Strategy_FIFO();
+		strategies[1] = new Strategy_LTFO();
+		
+		try {
+			fis = new FileInputStream(BoxOffice.class.getResource("").getPath() + "../info/passengerInfo.txt");
+			isr = new InputStreamReader(fis);
+			br = new BufferedReader(isr);
+			
+	        while ((thisLine = br.readLine()) != null) {
+	            st = new StringTokenizer(thisLine);
+	            id = Integer.parseInt(st.nextToken());
+	            arrival = Integer.parseInt(st.nextToken());
+	            ticketingTime = Integer.parseInt(st.nextToken());
+	            startPoint = st.nextToken();
+	            endPoint = st.nextToken();
+	            System.out.println(id + ", " + arrival + ", " + ticketingTime + ", " + startPoint + ", " + endPoint);
+            	passengers.add(new Passenger(id, arrival, ticketingTime, startPoint, endPoint));
+            	
+	        }
+		} catch (FileNotFoundException e) {
+			System.out.println("Cannot open file");
+			e.printStackTrace();
+		} finally {
+			br.close();
+		}
+		
+		for(int i = 0; i < strategies.length; i++){
+		//play simulation
+			while( !passengers.isEmpty() || office.hasPassenger()){//when there's passengers who are not arrived or not served, 
+				Passenger p;
+				while(true){
+					System.out.println("here");
+					if(!passengers.isEmpty()){
+
+						p = passengers.get(0);
+						if(p.getOfficeArrivalTime() == time){//If passenger has arrived,
+							System.out.println("size:" + passengers.size());
+							office.enqueuePassenger(p);//enqueue passenger to box office waiting line.
+							passengers.remove(0);
+						}
+						else 
+							break;
+					}
+					else
+						break;
+				}
+				office.simulate(strategies[i], time);
+				time++;
+				//System.out.println(passengers.isEmpty() + ", " + office.hasPassenger());
+			}
+			
+			System.out.println("In strategy" + i + ": " + time);
+		}
+		
+	}
+
+}

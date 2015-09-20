@@ -1,0 +1,98 @@
+package common.Station;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import common.ServiceStrategy.Strategy;
+
+public class BoxOffice {
+
+	Server[] servers;
+	private static BoxOffice instance = null;
+	private int availiableServers;
+	private static ArrayList<Passenger> waitingPassengers;
+	private Platform platform = Platform.getInstance();
+	
+	public void simulate(Strategy strategy, int time){
+		Server server;
+		//update servers
+		for(int i = 0; i < servers.length; i++){
+			server = servers[i];
+			
+			
+			if(!server.isAlive()){//if ticketing is over,
+				if(server.getMyPassenger() != null){
+					try {
+						server.join();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					Passenger passenger = server.getMyPassenger();
+					platform.enqueuePassenger(passenger);// send passenger to platform
+					waitingPassengers.remove(passenger);
+					servers[i] = new Server();
+					server = servers[i];
+					System.out.println("bavailableServers: " + this.availiableServers);
+					availiableServers++;
+					System.out.println("aavailableServers: " + this.availiableServers);
+				}
+				
+				//if any server is available
+				int nextPessengerIndex = strategy.getNextIndex(waitingPassengers);
+				Scanner sc = new Scanner(System.in);
+				sc.nextLine();
+				System.out.println("nextPassenger: " + nextPessengerIndex);
+				if(nextPessengerIndex == -1){
+					continue;
+				}
+				Passenger p = waitingPassengers.get(nextPessengerIndex);
+				
+				p.setTicketingWaitingTime(time - p.getOfficeArrivalTime());//set passenger's waiting time
+				server.setMyPassenger(p);// give the server one passenger
+				server.start();
+				availiableServers--;
+			}
+			
+			else{
+				server.downLeftTime();//If thread is alive, down serving time by 1.
+			}
+		}
+		
+		//keep simulate platform
+		platform.simulation(time);
+	}
+
+	private BoxOffice(){
+		servers = new Server[3];
+		for(int i = 0; i < servers.length; i++)
+			servers[i] = new Server();
+		waitingPassengers = new ArrayList<Passenger>();
+		availiableServers = 3;
+	}
+	
+	public static BoxOffice getInstance(){
+		if(instance == null)
+			instance = new BoxOffice();
+		return instance;
+	}
+	
+	public boolean hasPassenger(){
+		if(waitingPassengers.isEmpty() && availiableServers == 3){
+			return false;
+		}
+		return true;
+	}
+	public void enqueuePassenger(Passenger p){
+		waitingPassengers.add(p);
+	}
+	
+	
+	public Passenger dequeue(){
+		if(waitingPassengers.isEmpty())
+			return null;
+		Passenger p = waitingPassengers.get(0);
+		waitingPassengers.remove(0);
+		return p;
+	}
+	
+}

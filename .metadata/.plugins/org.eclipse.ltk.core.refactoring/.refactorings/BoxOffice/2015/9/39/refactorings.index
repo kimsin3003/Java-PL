@@ -1,0 +1,8 @@
+1442724755618	Rename field 'arrivalTime'
+1442724788516	Rename method 'getArrivalTime'
+1442724910320	Encapsulate field 'destinationArrivalTime'
+1442728127207	Rename package 'railroad'
+1442735086776	Rename local variable 'nextPessengerIndex'
+1442738494981	Encapsulate field 'ticketingStartTime'
+1442748339633	Rename local variable 'passengers'
+1442749141932	Rename method 'simulation'

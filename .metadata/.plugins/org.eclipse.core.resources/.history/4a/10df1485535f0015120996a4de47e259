@@ -1,0 +1,51 @@
+package common.Station;
+
+import java.util.ArrayList;
+
+public class Platform{
+	private static Platform instance = null;
+	private static ArrayList<Passenger> waitingPassengers;
+	private Platform(){ 
+		waitingPassengers = new ArrayList<Passenger>();	
+	}
+	
+	public static Platform getInstance(){
+		if(instance == null)
+			instance = new Platform();
+		return instance;
+	}
+	
+	public void simulation(int time){
+		if(hasArrivedTrain(time)){
+			int officeArrivingTime;
+			int ticketingWaitingTime;
+			int ticketingTime;
+			int platformArrivingTime;
+			for(int i = 0; i < waitingPassengers.size(); i++){
+				Passenger passenger = waitingPassengers.get(i);
+				officeArrivingTime = passenger.getArrivalTime();
+				ticketingWaitingTime = passenger.getTicketingWaitingTime();
+				ticketingTime = passenger.getTicketingTime();
+				platformArrivingTime = officeArrivingTime + ticketingWaitingTime + ticketingTime;
+				passenger.setTrainWaitingTime(time - platformArrivingTime);
+			}
+			
+			dequeueAll();
+		}
+	}
+	
+	public void enqueuePassenger(Passenger p){
+		waitingPassengers.add(p);
+	}
+	
+	private boolean hasArrivedTrain(int time){
+		if(time%3 == 0)
+			return true;
+		return false;
+	}
+	
+	private void dequeueAll(){
+		waitingPassengers.clear();
+	}
+	
+}

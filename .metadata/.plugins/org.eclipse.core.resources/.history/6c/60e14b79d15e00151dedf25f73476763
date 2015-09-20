@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+
+public class BoxOffice {
+
+	Server[] servers;
+
+	private static BoxOffice instance = null;
+	ArrayList waitingPassengers;
+	private BoxOffice(){}
+	
+	public Platform getInstance(){
+		if(instance == null)
+			instance = new Platform();
+		return instance;
+	}
+	public BoxOffice() {
+		servers = new Server[3];
+	}
+}

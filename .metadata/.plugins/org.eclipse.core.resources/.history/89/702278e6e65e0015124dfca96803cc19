@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+
+public class BoxOffice {
+
+	Server[] servers;
+	int notExitedThreads;
+	private static BoxOffice instance = null;
+	private static ArrayList<Passenger> waitingPassengers;
+	
+	public void simulate(int time){
+		
+	}
+	
+	private BoxOffice(){
+		notExitedThreads = 0;
+		servers = new Server[3];
+		waitingPassengers = new ArrayList<Passenger>();
+	}
+	
+	public static BoxOffice getInstance(){
+		if(instance == null)
+			instance = new BoxOffice();
+		return instance;
+	}
+	
+	public boolean hasPassenger(){
+		int index = 0;
+		if(waitingPassengers.isEmpty() && notExitedThreads == 0){
+			return false;
+		}
+		return true;
+	}
+	public void enqueuePassenger(Passenger p){
+		waitingPassengers.add(p);
+	}
+	
+	
+	public Passenger dequeue(){
+		if(waitingPassengers.isEmpty())
+			return null;
+		Passenger p = waitingPassengers.get(0);
+		waitingPassengers.remove(0);
+		return p;
+	}
+	
+}

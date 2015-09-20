@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;week5/src/hashset/AccountManagerHashSet.java&apos; to &apos;AccountManagerHashMap.java&apos;" description="Rename resource &apos;AccountManagerHashSet.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/hashset/AccountManagerHashSet.java" name="AccountManagerHashMap.java" stamp="1440121201786" updateReferences="true"/>
+</session>

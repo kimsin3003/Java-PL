@@ -1,6 +1,0 @@
-package Maze;
-
-public interface Point {
-
-		public boolean directionList;
-}

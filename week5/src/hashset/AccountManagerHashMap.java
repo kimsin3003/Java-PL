@@ -1,0 +1,55 @@
+package hashset;
+
+import java.util.HashMap;
+import java.util.Iterator;
+
+public class AccountManagerHashMap {
+
+	public HashMap<String, Account> accounts;
+	
+	public AccountManagerHashMap(){
+		this(10);
+	}
+	
+	public AccountManagerHashMap(int size){
+		accounts = new HashMap<String, Account>(size);
+	}
+	
+	public void insertAccount(String accountNumber, String accountName, float balance){
+		Account account = new Account(accountNumber, accountName, balance);
+		accounts.put(accountNumber, account);
+	}
+	
+	public void setDeposite(String accountNumber, float money){
+		
+		if(accounts.containsKey(accountNumber)){
+			Account account = accounts.get(accountNumber);
+			account.deposite(money);
+			return;
+		}
+		System.out.println("There is no account");
+		/*Iterator<Account> ir = accounts.iterator();
+		
+		while(ir.hasNext()){
+			Account account = ir.next();
+			String tempNumber = account.getAccountNumber();
+			
+			if(accountNumber.equals(tempNumber)){
+				account.deposite(money);
+				return;
+			}
+		}*/
+		
+		
+	}
+	
+	public void displayAll(){
+		
+		Iterator<String> ir = accounts.keySet().iterator();
+		while(ir.hasNext())
+			System.out.println(accounts.get(ir.next()));
+	}
+	
+	
+	
+}

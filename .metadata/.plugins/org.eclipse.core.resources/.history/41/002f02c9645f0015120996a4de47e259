@@ -1,0 +1,35 @@
+package common.Station;
+
+
+public class Server extends Thread {
+	
+	private Passenger myPassenger = null;
+	private int leftTime;
+	@Override
+	public void run() {
+		while(leftTime > 0);
+	}
+	
+	public int getLeftTime(){
+		return leftTime;
+	}
+	
+	public void downLeftTime(){
+		leftTime--;
+	}
+
+	public Passenger getMyPassenger() {
+		return myPassenger;
+	}
+
+	public void setMyPassenger(Passenger myPassenger) {
+		this.myPassenger = myPassenger;
+		if(this.myPassenger == null)
+			return;
+		this.leftTime = myPassenger.getTicketingTime();
+	}
+	
+	
+	
+	
+}

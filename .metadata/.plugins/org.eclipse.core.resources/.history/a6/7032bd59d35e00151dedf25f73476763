@@ -1,0 +1,63 @@
+
+public class Passenger {
+	private int id;
+	private int arrivalTime;
+	private int ticketingWaitingTime;
+	private int ticketingTime;
+	private int trainWaitingTime;
+	private int startPoint;
+	private int endPoint;
+	
+	public Passenger(int id, int arrivalTime, int startPoint, int endPoint){
+		this.id = id;
+		this.arrivalTime = arrivalTime;
+		this.startPoint = startPoint;
+		this.endPoint = endPoint;
+	}
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getArrivalTime() {
+		return arrivalTime;
+	}
+	public void setArrivalTime(int arrivalTime) {
+		this.arrivalTime = arrivalTime;
+	}
+	public int getTicketingWaitingTime() {
+		return ticketingWaitingTime;
+	}
+	public void setTicketingWaitingTime(int ticketingWaitingTime) {
+		this.ticketingWaitingTime = ticketingWaitingTime;
+	}
+	public int getTicketingTime() {
+		return ticketingTime;
+	}
+	public void setTicketingTime(int ticketingTime) {
+		this.ticketingTime = ticketingTime;
+	}
+	public int getTrainWaitingTime() {
+		return trainWaitingTime;
+	}
+	public void setTrainWaitingTime(int trainWaitingTime) {
+		this.trainWaitingTime = trainWaitingTime;
+	}
+	public int getStartPoint() {
+		return startPoint;
+	}
+	public void setStartPoint(int startPoint) {
+		this.startPoint = startPoint;
+	}
+	public int getEndPoint() {
+		return endPoint;
+	}
+	public void setEndPoint(int endPoint) {
+		this.endPoint = endPoint;
+	}
+	
+	
+}

@@ -1,0 +1,30 @@
+8월 28, 2015 11:16:46 오전 logging.MyLogger warning
+경고: name must not be null.
+8월 28, 2015 11:16:46 오전 logging.MyLogger warning
+경고: name must not exceed three words.
+<?xml version="1.0" encoding="x-windows-949" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-08-28T11:24:12</date>
+  <millis>1440728652519</millis>
+  <sequence>0</sequence>
+  <logger>mylogger</logger>
+  <level>WARNING</level>
+  <class>logging.MyLogger</class>
+  <method>warning</method>
+  <thread>1</thread>
+  <message>name must not be null.</message>
+</record>
+<record>
+  <date>2015-08-28T11:24:12</date>
+  <millis>1440728652536</millis>
+  <sequence>1</sequence>
+  <logger>mylogger</logger>
+  <level>WARNING</level>
+  <class>logging.MyLogger</class>
+  <method>warning</method>
+  <thread>1</thread>
+  <message>name must not exceed three words.</message>
+</record>
+</log>

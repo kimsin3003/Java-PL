@@ -1,0 +1,50 @@
+package common.path;
+
+public class Path {
+	static private Path instance = null;
+	static private int travelTime[][] = {{0, 16,22, 44, 29, 20, 41},
+			{16, 0, 28, 31, 45, 36, 49},
+			{22, 28, 0, 32, 23, 42, 53},
+			{44, 31, 32, 0, 5, 43, 18},
+			{29, 45, 23, 15, 0, 35, 12},
+			{20, 36, 42, 43, 35, 0, 25},
+			{41, 49, 35, 18, 12, 25, 0}};
+	private Path(){}
+	
+	static public Path getInstance(){
+		if(instance == null)
+			instance = new Path();
+		return instance;
+	}
+	
+	public int getTravelTime(String startPoint, String endPoint){
+		System.out.println(startPoint + ", " + endPoint);
+		int s_index = getIndex(startPoint);
+		int e_index = getIndex(endPoint);
+		return travelTime[s_index][e_index];
+	}
+	
+	private int getIndex(String stationName){
+		
+		switch(stationName){
+		case "Seoul":
+			return 0;
+		case "Chuncheon":
+			return 1;
+		case "Wouju":
+			return 2;
+		case "Gyeongju":
+			return 3;
+		case "Deajeon":
+			return 4;
+		case "Ansan":
+			return 5;
+		case "Gwangju":
+			return 6;
+		default:
+			System.out.println("no matching station");
+			return -1;
+		}
+		
+	}
+}

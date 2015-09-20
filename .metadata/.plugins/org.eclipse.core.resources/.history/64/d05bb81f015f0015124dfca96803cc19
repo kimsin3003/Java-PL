@@ -1,0 +1,24 @@
+package BoxOffice.defaul;
+
+
+public class Server extends Thread {
+	
+	private int timeToWait;
+	@Override
+	public void run() {
+		while(timeToWait > 0);
+	}
+	
+	public void setTimeToWait(int timeToWait){
+		this.timeToWait = timeToWait;
+	}
+	
+	public int GetTimeToWait(){
+		return this.timeToWait;
+	}
+	
+	public void downTimeToWait(){
+		this.timeToWait--;
+	}
+	
+}

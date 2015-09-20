@@ -1,0 +1,13 @@
+package ServiceStrategy;
+
+import java.util.ArrayList;
+
+public class Strategy_FIFO implements Strategy{
+
+	@Override
+	public int getNextIndex(ArrayList passengers) {
+		System.out.println("asdf");
+		return 0;
+	}
+	
+}

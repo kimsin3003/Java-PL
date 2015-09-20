@@ -6,7 +6,7 @@ public class TestAccount {
 
 	public static void main(String[] args) {
 		
-		AccountManagerHashSet manager = new AccountManagerHashSet();
+		AccountManagerHashMap manager = new AccountManagerHashMap();
 		
 		manager.insertAccount("1231", "Tomas", 3000.0F);
 		manager.insertAccount("1232", "Edward", 4000.0F);

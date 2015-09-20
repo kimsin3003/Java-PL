@@ -1,0 +1,9 @@
+package BoxOffice.ServiceStrategy;
+
+import java.util.ArrayList;
+
+import BoxOffice.defaul.Passenger;
+
+public interface Strategy{
+	public int getNextIndex(ArrayList<Passenger> passengers);
+}

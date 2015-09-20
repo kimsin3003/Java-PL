@@ -1,5 +1,0 @@
-package Maze;
-
-public class Map {
-	Point map[8][8] = new Map[8][8];
-}

@@ -1,0 +1,12 @@
+
+public class BoxOffice {
+
+	Runnable servers;
+	Thread threads[];
+	
+	public BoxOffice() {
+		servers = new Server[3];
+		for(int i = 0; i < servers.length; i++)
+			threads[i] = new Thread(servers[i]);
+	}
+}

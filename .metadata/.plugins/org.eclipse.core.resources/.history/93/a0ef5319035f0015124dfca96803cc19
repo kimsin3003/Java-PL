@@ -1,0 +1,74 @@
+package BoxOffice.defaul;
+
+import java.util.ArrayList;
+
+import BoxOffice.ServiceStrategy.Strategy;
+
+public class BoxOffice {
+
+	Server[] servers;
+	int availiableServers;
+	private static BoxOffice instance = null;
+	private static ArrayList<Passenger> waitingPassengers;
+	private Platform platform = Platform.getInstance();
+	
+	public void simulate(Strategy strategy, int time){
+		for(int i = 0; i < servers.length; i++){
+			
+			//If ticketing is over, send passenger to platform.
+			if(!servers[i].isAlive()){
+				if(servers[i].getMyPassenger() != null){
+					try {
+						servers[i].join();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					
+					platform.enqueuePassenger(servers[i].getMyPassenger());
+					servers[i].setMyPassenger(null);
+				}
+
+				int nextPessengerIndex = strategy.getNextIndex(waitingPassengers);
+				Passenger p = waitingPassengers.get(nextPessengerIndex);
+				servers[i].setMyPassenger(p);
+			}
+			//If thread is alive, down serving time by 1.
+			else{
+				servers[i].downLeftTime();
+			}
+		}
+		platform.simulation(time);
+	}
+
+	private BoxOffice(){
+		availiableServers = 3;
+		servers = new Server[3];
+		waitingPassengers = new ArrayList<Passenger>();
+	}
+	
+	public static BoxOffice getInstance(){
+		if(instance == null)
+			instance = new BoxOffice();
+		return instance;
+	}
+	
+	public boolean hasPassenger(){
+		if(waitingPassengers.isEmpty() && availiableServers != 3){
+			return false;
+		}
+		return true;
+	}
+	public void enqueuePassenger(Passenger p){
+		waitingPassengers.add(p);
+	}
+	
+	
+	public Passenger dequeue(){
+		if(waitingPassengers.isEmpty())
+			return null;
+		Passenger p = waitingPassengers.get(0);
+		waitingPassengers.remove(0);
+		return p;
+	}
+	
+}

@@ -1,0 +1,10 @@
+
+public class Passenger {
+	int id;
+	int arrivalTime;
+	int ticketingWaitingTime;
+	int ticketingTime;
+	int trainWaitingTime;
+	int startPoint;
+	int endPoint;
+}

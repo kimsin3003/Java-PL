@@ -1,0 +1,9 @@
+
+public class Passenger {
+	
+	int arrivalTime;
+	int ticketingTime;
+	int startingPoint;
+	int destination;
+	고객의 역에 도착시간, 티켓팅에 소요시간, 고객의 출발역, 도착역의 정보가 있다.
+}

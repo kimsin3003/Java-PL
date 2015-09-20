@@ -1,0 +1,17 @@
+package BoxOffice.defaul;
+
+
+public class Server extends Thread {
+	
+	private Passenger myPassenger;
+	@Override
+	public void run() {
+		while(myPassenger.getTicketingTime() > 0);
+	}
+	
+	public void downMyPassengerLeftTime(){
+		myPassenger.downTicketingTIme();
+	}
+	
+	
+}

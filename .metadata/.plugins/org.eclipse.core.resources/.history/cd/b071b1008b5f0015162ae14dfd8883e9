@@ -1,0 +1,64 @@
+package common.BoxOfficeTest;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import common.ServiceStrategy.Strategy;
+import common.Station.BoxOffice;
+import common.Station.Passenger;
+import common.Station.Platform;
+import common.info.FileRW;
+
+public class Simulator {
+	
+	private static Simulator instance = null;
+	private Simulator(){}
+	
+	public static Simulator getInstance(){
+		if(instance == null)
+			instance = new Simulator();
+		return instance;
+	}
+	
+	public int start(Strategy strategy){
+		int time = 0;
+		BoxOffice office = BoxOffice.getInstance();
+		ArrayList<Passenger> passengersToBuyTicket = new ArrayList<Passenger>();
+		ArrayList<Passenger> passengersWithTicket =  new ArrayList<Passenger>();
+		Platform platform = Platform.getInstance();
+		try {
+			FileRW.dataLoad(passengersToBuyTicket);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//play simulation
+		while( !passengersToBuyTicket.isEmpty() || office.hasPassenger() || platform.hasPassenger()){//when there's passengers who are not arrived or not served, 
+			Passenger passengerToBuyTicket;
+			while(true){
+				if(!passengersToBuyTicket.isEmpty()){
+
+					passengerToBuyTicket = passengersToBuyTicket.get(0);
+					if(passengerToBuyTicket.getOfficeArrivalTime() == time){//If passenger has arrived,
+						System.out.println("time: " + time + " size:" + passengersToBuyTicket.size());
+						office.enqueuePassenger(passengerToBuyTicket);//enqueue passenger to box office waiting line.
+						passengersToBuyTicket.remove(0);
+					}
+					else 
+						break;
+				}
+				else{
+
+					System.out.println("here");
+					break;
+				}
+			}
+			office.simulate(strategy, passengersWithTicket, time);
+			for(Passenger passengerWithTicket: passengersWithTicket)
+				platform.enqueuePassenger(passengerWithTicket);
+			passengersWithTicket.clear();
+			time++;
+		}
+		return time;
+	}
+}
