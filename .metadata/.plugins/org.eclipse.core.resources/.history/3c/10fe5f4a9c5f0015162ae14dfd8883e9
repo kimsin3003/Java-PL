@@ -56,7 +56,7 @@ public class FileRW {
 		OutputStreamWriter osr;
 		BufferedWriter bw = null;
 		try {
-			fos = new FileOutputStream("./src/common/info/" + outputFileName);
+			fos = new FileOutputStream("./src/common/info/"+ outputFileName);
 			osr = new OutputStreamWriter(fos);
 			bw = new BufferedWriter(osr);
 			String strToWrite;

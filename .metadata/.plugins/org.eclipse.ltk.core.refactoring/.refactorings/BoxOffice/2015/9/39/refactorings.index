@@ -6,3 +6,6 @@
 1442738494981	Encapsulate field 'ticketingStartTime'
 1442748339633	Rename local variable 'passengers'
 1442749141932	Rename method 'simulation'
+1442754876799	Rename resource 'BoxOfficeTest'
+1442754934080	Rename resource 'ServiceStrategy'
+1442754984803	Rename resource 'Station'

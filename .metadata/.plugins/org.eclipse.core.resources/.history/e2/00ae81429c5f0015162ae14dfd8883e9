@@ -27,7 +27,7 @@ public class FileRW {
 		String thisLine;
 		
 		try {
-			fis = new FileInputStream("./src/common/info/passengerInfo.txt");
+			fis = new FileInputStream(FileRW.class.getResource("").getPath() + "passengerInfo.txt");
 			isr = new InputStreamReader(fis);
 			br = new BufferedReader(isr);
 			
@@ -56,7 +56,7 @@ public class FileRW {
 		OutputStreamWriter osr;
 		BufferedWriter bw = null;
 		try {
-			fos = new FileOutputStream("./src/common/info/" + outputFileName);
+			fos = new FileOutputStream("./src/common/info/"+ outputFileName);
 			osr = new OutputStreamWriter(fos);
 			bw = new BufferedWriter(osr);
 			String strToWrite;
