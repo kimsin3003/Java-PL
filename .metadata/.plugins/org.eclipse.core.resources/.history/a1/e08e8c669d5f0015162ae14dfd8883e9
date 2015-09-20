@@ -11,10 +11,10 @@ public class BoxOfficeTest {
 		Simulator simulator = Simulator.getInstance();
 		
 		
-		for(int i = 0; i < strategies.length; i++){
-			System.out.println("strategy " + i + " start");
+		for(int i = 0; i < strategies.length; i++)
+			System.out.println("strategy " + i + "start");
 			simulator.start(strategies[i], "output" + (i+1) + ".txt");
-		}
+		
 	}
 
 }
