@@ -11,7 +11,7 @@ public class BoxOfficeTest {
 		Simulator simulator = Simulator.getInstance();
 		
 		for(int i = 0; i < strategies.length; i++)
-			simulator.start(strategies[i], "output" + (i+1) + ".txt");
+			System.out.println("spent time: " + simulator.start(strategies[i], "output" + (i+1) + ".txt"));
 		
 	}
 
