@@ -16,7 +16,7 @@ public class BoxOfficeTest {
 			simulator.start(strategies[i], "output" + (i+1) + ".txt");
 		}
 		
-		System.out.println("\n\n생신 축하드립니다~!");
+		System.out.println("생신 축하드립니다~!");
 	}
 
 }
